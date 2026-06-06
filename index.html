@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaik Afrin — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #080c14;
+    --surface: #0e1420;
+    --surface2: #141b2b;
+    --border: rgba(99,175,255,0.12);
+    --accent: #4fa8ff;
+    --accent2: #a78bfa;
+    --accent3: #34d399;
+    --text: #e8edf5;
+    --muted: #7b8aa0;
+    --glow: 0 0 40px rgba(79,168,255,0.15);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 3rem;
+    background: rgba(8,12,20,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.2rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.875rem; letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 8rem 3rem 4rem;
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(79,168,255,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(167,139,250,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(99,175,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,175,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .hero-inner { position: relative; max-width: 750px; }
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); border: 1px solid rgba(79,168,255,0.3);
+    padding: 0.35rem 1rem; border-radius: 100px;
+    margin-bottom: 1.8rem;
+    background: rgba(79,168,255,0.06);
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 800; line-height: 1.0;
+    letter-spacing: -0.03em;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .hero h1 span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    margin-top: 1.5rem; font-size: 1.15rem;
+    color: var(--muted); font-weight: 300; max-width: 540px; margin-inline: auto;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-cta {
+    margin-top: 2.5rem; display: flex; gap: 1rem;
+    justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    background: var(--accent); color: #03060d;
+    font-weight: 500; font-size: 0.95rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    border: 1px solid var(--border); color: var(--text);
+    font-size: 0.95rem; text-decoration: none; cursor: pointer;
+    background: transparent; transition: border-color 0.2s, transform 0.15s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.75rem; font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+  }
+  .section-line {
+    width: 48px; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    margin-bottom: 3rem; border-radius: 2px;
+  }
+  .divider {
+    max-width: 1100px; margin: 0 auto;
+    border: none; border-top: 1px solid var(--border);
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: center;
+  }
+  .about-avatar-wrap {
+    display: flex; justify-content: center;
+  }
+  .about-avatar {
+    width: 280px; height: 280px; border-radius: 24px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 0.5rem;
+    font-size: 5rem; position: relative; overflow: hidden;
+  }
+  .about-avatar::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at top left, rgba(79,168,255,0.12), transparent 60%);
+  }
+  .about-avatar-initials {
+    font-family: 'Syne', sans-serif;
+    font-size: 4rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    position: relative; z-index: 1;
+  }
+  .about-name-tag {
+    font-size: 0.8rem; color: var(--muted); position: relative; z-index: 1;
+    letter-spacing: 0.04em;
+  }
+  .about-text p { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.2rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+  .tag {
+    padding: 0.3rem 0.85rem; border-radius: 100px;
+    font-size: 0.8rem; font-weight: 500;
+    background: rgba(79,168,255,0.08);
+    border: 1px solid rgba(79,168,255,0.2);
+    color: var(--accent);
+  }
+  .tag.green {
+    background: rgba(52,211,153,0.08);
+    border-color: rgba(52,211,153,0.2);
+    color: var(--accent3);
+  }
+  .tag.purple {
+    background: rgba(167,139,250,0.08);
+    border-color: rgba(167,139,250,0.2);
+    color: var(--accent2);
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.75rem;
+    position: relative; overflow: hidden;
+    transition: border-color 0.25s, transform 0.2s;
+    cursor: default;
+  }
+  .project-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .project-card:hover { border-color: rgba(79,168,255,0.35); transform: translateY(-3px); }
+  .project-card:hover::before { opacity: 1; }
+  .card-blue::before { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .card-green::before { background: linear-gradient(90deg, var(--accent3), var(--accent)); }
+  .card-purple::before { background: linear-gradient(90deg, var(--accent2), #f472b6); }
+  .card-teal::before { background: linear-gradient(90deg, #2dd4bf, var(--accent3)); }
+  .project-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1.2rem;
+  }
+  .icon-blue { background: rgba(79,168,255,0.12); }
+  .icon-green { background: rgba(52,211,153,0.12); }
+  .icon-purple { background: rgba(167,139,250,0.12); }
+  .icon-teal { background: rgba(45,212,191,0.12); }
+  .project-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;
+  }
+  .project-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.2rem; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .ptag {
+    font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 100px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--muted); letter-spacing: 0.02em;
+  }
+  .project-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1.2rem; padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .gh-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.8rem; color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .gh-link:hover { color: var(--accent); }
+  .gh-link svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+  /* ── CERTIFICATES ── */
+  .certs-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  .cert-card {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.1rem 1.25rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .cert-card:hover {
+    border-color: rgba(79,168,255,0.3);
+    background: var(--surface2);
+  }
+  .cert-badge {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.15rem; flex-shrink: 0;
+    background: rgba(79,168,255,0.08);
+    border: 1px solid rgba(79,168,255,0.15);
+  }
+  .cert-info { flex: 1; min-width: 0; }
+  .cert-info strong {
+    display: block; font-size: 0.9rem; font-weight: 500;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    color: var(--text);
+  }
+  .cert-info span { font-size: 0.78rem; color: var(--muted); }
+  .cert-date {
+    font-size: 0.75rem; color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* ── CONTACT ── */
+  .contact-wrap {
+    max-width: 640px;
+  }
+  .contact-lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 2.5rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.1rem 1.4rem;
+    text-decoration: none; color: var(--text);
+    transition: border-color 0.2s, transform 0.15s;
+    font-size: 0.95rem;
+  }
+  .contact-link:hover { border-color: rgba(79,168,255,0.35); transform: translateX(4px); }
+  .contact-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; background: rgba(79,168,255,0.08);
+    flex-shrink: 0;
+  }
+  .contact-link .arrow { margin-left: auto; color: var(--muted); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 3rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer strong { color: var(--text); }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .nav-links li:nth-child(n+3) { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .about-avatar { width: 200px; height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SA.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="max-width:100%; padding-inline: 0;">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Open to opportunities &nbsp;✦&nbsp; Available 2026</div>
+    <h1>Shaik<br><span>Afrin</span></h1>
+    <p class="hero-sub">
+      Technology explorer at the intersection of AI, cloud computing, and real-world problem solving.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});return false;">View Projects →</a>
+      <a href="#contact" class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <p class="section-label">Who I am</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-avatar-wrap reveal">
+      <div class="about-avatar">
+        <div class="about-avatar-initials">SA</div>
+        <div class="about-name-tag">Shaik Afrin</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p>
+        Hi! I'm Shaik Afrin — a student with a deep curiosity for technology and a drive to turn ideas into impactful solutions. I'm passionate about the ways AI and intelligent systems can solve real, everyday challenges.
+      </p>
+      <p>
+        From building feedback platforms to exploring multimodal AI, I love working at the crossroads of design, data, and engineering. My certifications in cloud computing, DevOps, and cybersecurity reflect a hunger to keep growing.
+      </p>
+      <p>
+        Outside of tech, I care about sustainability and local communities — which is why projects like wildlife conservation find their way into my portfolio.
+      </p>
+      <div class="tags">
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Cloud Computing</span>
+        <span class="tag">Generative AI</span>
+        <span class="tag green">Real-World Impact</span>
+        <span class="tag green">Open Source</span>
+        <span class="tag purple">UX Thinking</span>
+        <span class="tag purple">DevOps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <p class="section-label">What I've built</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card card-blue reveal">
+      <div class="project-icon icon-blue">🍽️</div>
+      <h3>Hostel Mess Feedback System</h3>
+      <p>A digital platform that streamlines meal feedback from hostel residents, enabling administrators to track satisfaction trends and improve food quality in real time.</p>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="ptag">Web App</span>
+          <span class="ptag">User Research</span>
+          <span class="ptag">Data Collection</span>
+        </div>
+        <a href="https://github.com/shaikafrin/hostel-mess-feedback" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card card-purple reveal">
+      <div class="project-icon icon-purple">🤖</div>
+      <h3>StudyMate</h3>
+      <p>An intelligent conversational assistant powered by large language models, designed to answer domain-specific queries with context-aware, human-like responses.</p>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="ptag">LLM</span>
+          <span class="ptag">NLP</span>
+          <span class="ptag">Generative AI</span>
+          <span class="ptag">Python</span>
+        </div>
+        <a href="https://github.com/Afrin-pro/StudyMate" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card card-green reveal">
+      <div class="project-icon icon-green">🔍</div>
+      <h3>CLIP Multimodal Search</h3>
+      <p>A semantic search engine leveraging OpenAI's CLIP model to retrieve images from text queries and vice versa — bridging the gap between vision and language.</p>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="ptag">Computer Vision</span>
+          <span class="ptag">CLIP</span>
+          <span class="ptag">Embeddings</span>
+          <span class="ptag">PyTorch</span>
+        </div>
+        <a href="https://github.com/shaikafrin/clip-multimodal-search" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card card-teal reveal">
+      <div class="project-icon icon-teal">🦋</div>
+      <h3>Local Wildlife Conservation</h3>
+      <p>A community-driven initiative using technology to document, track, and raise awareness about local biodiversity — combining field data with digital tools for conservation impact.</p>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="ptag">Conservation Tech</span>
+          <span class="ptag">Community</span>
+          <span class="ptag">Data Mapping</span>
+        </div>
+        <a href="https://github.com/shaikafrin/wildlife-conservation" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="reveal">
+    <p class="section-label">Continuous learning</p>
+    <h2 class="section-title">Certificates</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="certs-grid">
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">☁️</div>
+      <div class="cert-info">
+        <strong>Mastering Cloud Computing & AWS</strong>
+        <span>AWS / Cloud Architecture</span>
+      </div>
+      <span class="cert-date">Oct 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🔧</div>
+      <div class="cert-info">
+        <strong>DevOps Advanced</strong>
+        <span>CI/CD · Infrastructure</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">⚙️</div>
+      <div class="cert-info">
+        <strong>DevOps Essentials</strong>
+        <span>Pipelines · Automation</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🌐</div>
+      <div class="cert-info">
+        <strong>Google Cloud Platform — Associate</strong>
+        <span>GCP · Cloud Associate</span>
+      </div>
+      <span class="cert-date">Oct 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🧠</div>
+      <div class="cert-info">
+        <strong>Cisco — Introduction to Modern AI</strong>
+        <span>Cisco · Artificial Intelligence</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🔒</div>
+      <div class="cert-info">
+        <strong>Foundations of Cybersecurity</strong>
+        <span>Google · Security Fundamentals</span>
+      </div>
+      <span class="cert-date">Feb 2026</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">💻</div>
+      <div class="cert-info">
+        <strong>Commit to Code</strong>
+        <span>Software Development</span>
+      </div>
+      <span class="cert-date">Feb 2026</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🎨</div>
+      <div class="cert-info">
+        <strong>UX & Design Thinking</strong>
+        <span>Human-Centred Design</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">📐</div>
+      <div class="cert-info">
+        <strong>Introduction to UI/UX</strong>
+        <span>Interface Design Fundamentals</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">📊</div>
+      <div class="cert-info">
+        <strong>Google Analytics</strong>
+        <span>Web Analytics · Data</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🏷️</div>
+      <div class="cert-info">
+        <strong>Cloud Digital Leader</strong>
+        <span>Google · Digital Transformation</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-badge">🛍️</div>
+      <div class="cert-info">
+        <strong>Flipkart Runway</strong>
+        <span>E-Commerce · Product Thinking</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <p class="section-label">Let's connect</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-wrap reveal">
+    <p class="contact-lead">
+      I'm always open to exciting conversations — whether it's about a project idea, an internship opportunity, or just talking tech. Feel free to reach out!
+    </p>
+    <div class="contact-links">
+      <a href="mailto:afrinshaik11062005@gmail.com" class="contact-link">
+        <span class="contact-icon">✉️</span>
+        <span>afrin@example.com</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/shaik-afrin-353464302/" target="_blank" class="contact-link">
+        <span class="contact-icon">💼</span>
+        <span>LinkedIn — Shaik Afrin</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://github.com/Afrin-pro" target="_blank" class="contact-link">
+        <span class="contact-icon">🐙</span>
+        <span>GitHub — @shaikafrin</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Designed &amp; built with care by <strong>Shaik Afrin</strong> · 2026
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        const siblings = e.target.parentElement.querySelectorAll('.reveal:not(.visible)');
+        siblings.forEach((el, j) => {
+          setTimeout(() => el.classList.add('visible'), j * 80);
+        });
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
