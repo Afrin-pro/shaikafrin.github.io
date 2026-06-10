@@ -4,9 +4,9 @@
 🌐 Live site: https://poetic-hummingbird-d3cf36.netlify.app
 
 ## Projects
-- 🍽️ Hostel Mess Feedback System
-- 🤖 GenAI Chatbot
 - 🔍 CLIP Multimodal Search
+- 🤖 GenAI Chatbot
+- 🍽️ Hostel Mess Feedback System
 - 🦋 Local Wildlife Conservation
 
 ## Tech Stack
