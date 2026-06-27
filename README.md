@@ -86,7 +86,7 @@ Every commit to `main` triggers an automatic redeploy on both platforms.
 
 <div>
 
-[![Email](https://img.shields.io/badge/Email-afrin%40egmail.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrinshaik11062005@gmail.com)
+[![Email](https://img.shields.io/badge/Email-afrin%40gmail.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrinshaik11062005@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Shaik_Afrin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shaik-afrin-353464302/)
 [![GitHub](https://img.shields.io/badge/GitHub-@shaikafrin-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Afrin-pro)
 
