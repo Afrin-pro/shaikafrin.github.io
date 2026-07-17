@@ -206,7 +206,7 @@
 
   /* ── PROJECTS ── */
   .projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
   }
   .project-card {
@@ -228,6 +228,10 @@
   .card-green::before { background: linear-gradient(90deg, var(--accent3), var(--accent)); }
   .card-purple::before { background: linear-gradient(90deg, var(--accent2), #f472b6); }
   .card-teal::before { background: linear-gradient(90deg, #2dd4bf, var(--accent3)); }
+  .card-orange::before { background: linear-gradient(90deg, #fb923c, #f59e0b); }
+  .card-red::before { background: linear-gradient(90deg, #f87171, #fb923c); }
+  .icon-orange { background: rgba(251,146,60,0.12); }
+  .icon-red { background: rgba(248,113,113,0.12); }
   .project-icon {
     width: 48px; height: 48px; border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
@@ -397,13 +401,13 @@
     </div>
     <div class="about-text reveal">
       <p>
-        Hi! I'm Shaik Afrin — a student with a deep curiosity for technology and a drive to turn ideas into impactful solutions. I'm passionate about the ways AI and intelligent systems can solve real, everyday challenges.
+        Hi! I'm Shaik Afrin — a student builder with a deep curiosity for AI and a drive to ship things that matter. From multimodal search engines to Salesforce AI platforms, I love turning complex ideas into real, working products.
       </p>
       <p>
-        From building feedback platforms to exploring multimodal AI, I love working at the crossroads of design, data, and engineering. My certifications in cloud computing, DevOps, and cybersecurity reflect a hunger to keep growing.
+        I've built across the full spectrum — GenAI chatbots with FastAPI and Groq, fashion search with CLIP and FAISS, enterprise automation on ServiceNow, and AI-powered admissions systems on Salesforce Agentforce.
       </p>
       <p>
-        Outside of tech, I care about sustainability and local communities — which is why projects like wildlife conservation find their way into my portfolio.
+        Outside of tech, I care deeply about nature and community — which is why WildGuard, a wildlife conservation platform, is one of my most meaningful projects.
       </p>
       <div class="tags">
         <span class="tag">Artificial Intelligence</span>
@@ -430,29 +434,30 @@
   <div class="projects-grid">
 
     <div class="project-card card-blue reveal">
-      <div class="project-icon icon-blue">🍽️</div>
-      <h3>Hostel Mess Feedback System</h3>
-      <p>A digital platform that streamlines meal feedback from hostel residents, enabling administrators to track satisfaction trends and improve food quality in real time.</p>
+      <div class="project-icon icon-blue">🎓</div>
+      <h3>AI-Enabled Student Admission System</h3>
+      <p>AI-powered Salesforce admissions platform built for the SmartBridge VIP Program (AICTE) — featuring Agentforce Admissions Assistant, automated enrollment flows, and intelligent duplicate management.</p>
       <div class="project-footer">
         <div class="project-tags">
-          <span class="ptag">Web App</span>
-          <span class="ptag">User Research</span>
-          <span class="ptag">Data Collection</span>
+          <span class="ptag">Salesforce</span>
+          <span class="ptag">JavaScript</span>
+          <span class="ptag">Agentforce</span>
+          <span class="ptag">AICTE</span>
         </div>
-        <a href="https://github.com/shaikafrin/hostel-mess-feedback" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+        <a href="https://github.com/Afrin-pro/AI-Enabled-Student-Admission-System" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
 
     <div class="project-card card-purple reveal">
       <div class="project-icon icon-purple">🤖</div>
-      <h3>StudyMate</h3>
-      <p>An intelligent conversational assistant powered by large language models, designed to answer domain-specific queries with context-aware, human-like responses.</p>
+      <h3>StudyMate — GenAI Chatbot</h3>
+      <p>Chat with your notes, PDFs, and diagrams — an AI-powered study assistant built with FastAPI, Groq vision, and Hugging Face Inference API for context-aware, multimodal learning support.</p>
       <div class="project-footer">
         <div class="project-tags">
-          <span class="ptag">LLM</span>
-          <span class="ptag">NLP</span>
-          <span class="ptag">Generative AI</span>
           <span class="ptag">Python</span>
+          <span class="ptag">FastAPI</span>
+          <span class="ptag">Groq</span>
+          <span class="ptag">HuggingFace</span>
         </div>
         <a href="https://github.com/Afrin-pro/StudyMate" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
@@ -461,31 +466,48 @@
     <div class="project-card card-green reveal">
       <div class="project-icon icon-green">🔍</div>
       <h3>CLIP Multimodal Search</h3>
-      <p>A semantic search engine leveraging OpenAI's CLIP model to retrieve images from text queries and vice versa — bridging the gap between vision and language.</p>
+      <p>Multimodal fashion search engine — 44k products searchable by text, image, or both. Built with Marqo FashionCLIP, Facebook FAISS, and Streamlit. Deployed on Hugging Face Spaces.</p>
       <div class="project-footer">
         <div class="project-tags">
-          <span class="ptag">Computer Vision</span>
-          <span class="ptag">CLIP</span>
-          <span class="ptag">Embeddings</span>
-          <span class="ptag">PyTorch</span>
+          <span class="ptag">Python</span>
+          <span class="ptag">FAISS</span>
+          <span class="ptag">FashionCLIP</span>
+          <span class="ptag">Streamlit</span>
         </div>
-        <a href="https://github.com/shaikafrin/clip-multimodal-search" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+        <a href="https://github.com/Afrin-pro/fashion-similarity-search" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
 
     <div class="project-card card-teal reveal">
       <div class="project-icon icon-teal">🦋</div>
-      <h3>Local Wildlife Conservation</h3>
-      <p>A community-driven initiative using technology to document, track, and raise awareness about local biodiversity — combining field data with digital tools for conservation impact.</p>
+      <h3>Wildguard — Wildlife Conservation</h3>
+      <p>Protecting nature, empowering communities. A tech-driven platform to document and raise awareness about local biodiversity, combining community reporting with digital conservation tools.</p>
       <div class="project-footer">
         <div class="project-tags">
+          <span class="ptag">EJS</span>
           <span class="ptag">Conservation Tech</span>
           <span class="ptag">Community</span>
-          <span class="ptag">Data Mapping</span>
         </div>
         <a href="https://github.com/Afrin-pro/wildguard" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
+
+    <div class="project-card card-orange reveal">
+      <div class="project-icon icon-orange">⚙️</div>
+      <h3>ServiceNow Internship Project</h3>
+      <p>Employee Onboarding Automation built on ServiceNow App Engine Studio — featuring low-code approval flows, catalog items, and automated task assignments to streamline HR operations.</p>
+      <div class="project-footer">
+        <div class="project-tags">
+          <span class="ptag">ServiceNow</span>
+          <span class="ptag">Low-Code</span>
+          <span class="ptag">Automation</span>
+          <span class="ptag">HR Tech</span>
+        </div>
+        <a href="https://github.com/Afrin-pro/ServiceNow_Internship_project" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      </div>
+    </div>
+
+
 
   </div>
 </section>
@@ -510,7 +532,14 @@
       <span class="cert-date">Oct 2025</span>
     </div>
 
-    
+    <div class="cert-card reveal">
+      <div class="cert-badge">🔧</div>
+      <div class="cert-info">
+        <strong>DevOps Advanced</strong>
+        <span>CI/CD · Infrastructure</span>
+      </div>
+      <span class="cert-date">Nov 2025</span>
+    </div>
 
     <div class="cert-card reveal">
       <div class="cert-badge">⚙️</div>
@@ -619,19 +648,19 @@
       I'm always open to exciting conversations — whether it's about a project idea, an internship opportunity, or just talking tech. Feel free to reach out!
     </p>
     <div class="contact-links">
-      <a href="mailto:afrinshaik11062005@gmail.com" class="contact-link">
+      <a href="mailto:afrin@example.com" class="contact-link">
         <span class="contact-icon">✉️</span>
         <span>afrin@example.com</span>
         <span class="arrow">→</span>
       </a>
-      <a href="https://www.linkedin.com/in/shaik-afrin-353464302/" target="_blank" class="contact-link">
+      <a href="https://linkedin.com" target="_blank" class="contact-link">
         <span class="contact-icon">💼</span>
         <span>LinkedIn — Shaik Afrin</span>
         <span class="arrow">→</span>
       </a>
       <a href="https://github.com/Afrin-pro" target="_blank" class="contact-link">
         <span class="contact-icon">🐙</span>
-        <span>GitHub — @shaikafrin</span>
+        <span>GitHub — @Afrin-pro</span>
         <span class="arrow">→</span>
       </a>
     </div>
