@@ -1,12 +1,12 @@
 <div align="center">
 
 # Shaik Afrin
-### Technology Explorer · AI Enthusiast · Problem Solver
+### AI Builder · Cloud Enthusiast · Real-World Problem Solver
 
 [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-poetic--hummingbird--d3cf36.netlify.app-4fa8ff?style=for-the-badge)](https://poetic-hummingbird-d3cf36.netlify.app)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-shaikafrin.github.io-a78bfa?style=for-the-badge&logo=github)](https://shaikafrin.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-Afrin--pro-171515?style=for-the-badge&logo=github)](https://github.com/Afrin-pro)
 
-*Passionate about building real-world solutions at the intersection of AI, cloud, and human-centred design.*
+*Building at the intersection of AI, cloud, and real-world impact.*
 
 </div>
 
@@ -16,10 +16,11 @@
 
 | Project | Description | Tech |
 |---|---|---|
-| 🍽️ **Hostel Mess Feedback System** | Digital platform to collect & track meal feedback from hostel residents in real time | HTML · CSS · JS · Data |
-| 🤖 **GenAI Chatbot** | Conversational AI assistant powered by LLMs for domain-specific queries | Python · LLM · NLP |
-| 🔍 **CLIP Multimodal Search** | Semantic search engine bridging vision and language using OpenAI's CLIP | PyTorch · CLIP · Embeddings |
-| 🦋 **Local Wildlife Conservation** | Community-driven biodiversity tracking using field data and digital mapping tools | Conservation Tech · Mapping |
+| 🎓 **[AI-Enabled Student Admission System](https://github.com/Afrin-pro/AI-Enabled-Student-Admission-System)** | AI-powered Salesforce admissions platform with Agentforce Assistant, automated enrollment flows & duplicate management. Built for SmartBridge VIP Program (AICTE). | Salesforce · Agentforce · JavaScript |
+| 🤖 **[StudyMate](https://github.com/Afrin-pro/StudyMate)** | Chat with your notes, PDFs, and diagrams — AI-powered study assistant with multimodal support via FastAPI, Groq vision & HF Inference API | Python · FastAPI · Groq · HuggingFace |
+| 👗 **[Fashion Similarity Search](https://github.com/Afrin-pro/fashion-similarity-search)** | Multimodal fashion search engine — 44k products searchable by text, image, or both. Built with Marqo FashionCLIP, Facebook FAISS & Streamlit. Deployed on HuggingFace Spaces. | Python · CLIP · FAISS · Streamlit |
+| 🦋 **[WildGuard](https://github.com/Afrin-pro/wildguard)** | Protecting nature, empowering communities — a tech-driven platform for documenting and raising awareness about local biodiversity | EJS · Conservation Tech |
+| ⚙️ **[ServiceNow Internship Project](https://github.com/Afrin-pro/ServiceNow_Internship_project)** | Employee Onboarding Automation on ServiceNow App Engine Studio — low-code approval flows, catalog items & automated task assignments | ServiceNow · Low-Code · HR Tech |
 
 ---
 
@@ -44,15 +45,15 @@
 
 ---
 
-## 🛠️ Skills & Interests
+## 🛠️ Skills
 
 ```
-AI / ML          ████████████░░  LLMs · CLIP · Multimodal · NLP
-Cloud            ███████████░░░  AWS · GCP · Cloud Architecture
+Generative AI    ████████████░░  LLMs · RAG · Multimodal · Groq · HuggingFace
+Cloud            ███████████░░░  AWS · GCP · Salesforce · ServiceNow
+Python / AI      ████████████░░  FastAPI · FAISS · CLIP · Streamlit · PyTorch
+Web Dev          ████████░░░░░░  HTML · CSS · JavaScript · EJS
 DevOps           █████████░░░░░  CI/CD · Pipelines · Automation
-Web Dev          ████████████░░  HTML · CSS · JavaScript
-UX Thinking      ████████░░░░░░  Design Thinking · User Research
-Cybersecurity    ███████░░░░░░░  Foundations · Risk Awareness
+UX Thinking      ███████░░░░░░░  Design Thinking · User Research
 ```
 
 ---
@@ -60,7 +61,7 @@ Cybersecurity    ███████░░░░░░░  Foundations · Risk
 ## 📁 Repository Structure
 
 ```
-shaikafrin.github.io/
+Afrin-pro.github.io/
 │
 ├── index.html          # Full portfolio — single file, no frameworks
 └── README.md           # You're reading it!
@@ -70,11 +71,9 @@ shaikafrin.github.io/
 
 ## 🔄 Deployment
 
-This portfolio uses a dual-hosting setup:
-
 ```
 git push → GitHub repo
-              ├── GitHub Pages  →  shaikafrin.github.io      (auto)
+              ├── GitHub Pages  →  Afrin-pro.github.io         (auto)
               └── Netlify       →  poetic-hummingbird-d3cf36.netlify.app  (auto)
 ```
 
@@ -86,9 +85,9 @@ Every commit to `main` triggers an automatic redeploy on both platforms.
 
 <div>
 
-[![Email](https://img.shields.io/badge/Email-afrin%40gmail.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrinshaik11062005@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shaik_Afrin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shaik-afrin-353464302/)
-[![GitHub](https://img.shields.io/badge/GitHub-@shaikafrin-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Afrin-pro)
+[![Email](https://img.shields.io/badge/Email-afrin%40example.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrin@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shaik_Afrin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Afrin--pro-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Afrin-pro)
 
 </div>
 
