@@ -1,71 +1,61 @@
 <div align="center">
 
 # Shaik Afrin
-### AI Builder · Cloud Enthusiast · Real-World Problem Solver
+### AI Builder · B.Tech CSE '27 · Mohan Babu University
 
 [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-poetic--hummingbird--d3cf36.netlify.app-4fa8ff?style=for-the-badge)](https://poetic-hummingbird-d3cf36.netlify.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Afrin--pro-171515?style=for-the-badge&logo=github)](https://github.com/Afrin-pro)
 
-*Building at the intersection of AI, cloud, and real-world impact.*
+*Building AI systems that are tested, observable, and shipped.*
 
 </div>
+
+---
+
+## 💼 Experience
+
+**Salesforce Virtual Internship — SmartBridge** (AICTE/APSCHE-affiliated) · *May 2026 – Jul 2026*
+Certified Administrator – AI Agentforce Specialization
+
+- Built an AI-enabled admissions system on Salesforce Developer Edition: custom objects, tabs, validation rules, record-triggered Flows
+- Built and debugged an Agentforce agent with subagent routing, record-query actions, and prompt templates grounded on live CRM data
+- Earned 40+ Trailhead badges, including two Superbadges
 
 ---
 
 ## 🚀 Projects
 
-| Project | Description | Tech |
+| Project | Highlights | Tech |
 |---|---|---|
-| 🎓 **[AI-Enabled Student Admission System](https://github.com/Afrin-pro/AI-Enabled-Student-Admission-System)** | AI-powered Salesforce admissions platform with Agentforce Assistant, automated enrollment flows & duplicate management. Built for SmartBridge VIP Program (AICTE). | Salesforce · Agentforce · JavaScript |
-| 🤖 **[StudyMate](https://github.com/Afrin-pro/StudyMate)** | Chat with your notes, PDFs, and diagrams — AI-powered study assistant with multimodal support via FastAPI, Groq vision & HF Inference API | Python · FastAPI · Groq · HuggingFace |
-| 👗 **[Fashion Similarity Search](https://github.com/Afrin-pro/fashion-similarity-search)** | Multimodal fashion search engine — 44k products searchable by text, image, or both. Built with Marqo FashionCLIP, Facebook FAISS & Streamlit. Deployed on HuggingFace Spaces. | Python · CLIP · FAISS · Streamlit |
-| 🦋 **[WildGuard](https://github.com/Afrin-pro/wildguard)** | Protecting nature, empowering communities — a tech-driven platform for documenting and raising awareness about local biodiversity | EJS · Conservation Tech |
-| ⚙️ **[ServiceNow Internship Project](https://github.com/Afrin-pro/ServiceNow_Internship_project)** | Employee Onboarding Automation on ServiceNow App Engine Studio — low-code approval flows, catalog items & automated task assignments | ServiceNow · Low-Code · HR Tech |
+| 🎓 **[AI-Enabled Student Admission System](https://github.com/Afrin-pro/AI-Enabled-Student-Admission-System)** | Salesforce Developer Edition build with custom objects, tabs, Flows and an Agentforce admissions agent | Salesforce · Agentforce · Flow Builder |
+| 🤖 **[StudyMate](https://github.com/Afrin-pro/StudyMate)** | Multimodal study assistant (text, image, PDF); 190+ tests at ~97% coverage; Prometheus metrics & JSON logs | Python · FastAPI · Groq · Docker · GitHub Actions |
+| 👗 **[Fashion Similarity Search](https://github.com/Afrin-pro/fashion-similarity-search)** | 44,000+ products searchable by text or image; ~0.3s latency; peak memory cut from ~15GB to ~200MB | Python · FashionCLIP · FAISS · Streamlit |
+| 🦋 **[WildGuard](https://github.com/Afrin-pro/wildguard)** | Protecting nature, empowering communities | EJS · Conservation Tech |
+| ⚙️ **[ServiceNow Internship Project](https://github.com/Afrin-pro/ServiceNow_Internship_project)** | Employee onboarding automation with approvals and catalog items on App Engine Studio | ServiceNow · Low-Code |
 
 ---
 
-## 🏅 Certificates
+## 🏅 Certifications
 
-<div>
-
-![Cloud](https://img.shields.io/badge/AWS-Mastering_Cloud_Computing-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
-![GCP](https://img.shields.io/badge/Google_Cloud-Associate_Cloud_Engineer-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![Cloud Leader](https://img.shields.io/badge/Google-Cloud_Digital_Leader-34A853?style=flat-square&logo=google&logoColor=white)
-![DevOps Advanced](https://img.shields.io/badge/DevOps-Advanced-0A0A0A?style=flat-square&logo=githubactions&logoColor=white)
-![DevOps Essentials](https://img.shields.io/badge/DevOps-Essentials-0A0A0A?style=flat-square&logo=githubactions&logoColor=white)
-![Cisco AI](https://img.shields.io/badge/Cisco-Intro_to_Modern_AI-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
-![Cybersecurity](https://img.shields.io/badge/Google-Foundations_of_Cybersecurity-EA4335?style=flat-square&logo=google&logoColor=white)
-![UX](https://img.shields.io/badge/UX_%26_Design_Thinking-Human_Centred_Design-a78bfa?style=flat-square)
-![UIUX](https://img.shields.io/badge/Intro_to_UI%2FUX-Interface_Design-a78bfa?style=flat-square)
-![Analytics](https://img.shields.io/badge/Google-Analytics-F4B400?style=flat-square&logo=googleanalytics&logoColor=white)
-![Flipkart](https://img.shields.io/badge/Flipkart-Runway-2874F0?style=flat-square)
-![Commit](https://img.shields.io/badge/Commit_to_Code-Software_Development-34d399?style=flat-square)
-
-</div>
+![PyTorch](https://img.shields.io/badge/LinkedIn_Learning-Computer_Vision_%26_Object_Detection_with_PyTorch-0A66C2?style=flat-square&logo=linkedin&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-Digital_Leader-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![Claude](https://img.shields.io/badge/Anthropic_Academy-Claude_Platform_101-D97757?style=flat-square)
+![UX](https://img.shields.io/badge/Udemy-UX_%26_Design_Thinking-A435F0?style=flat-square&logo=udemy&logoColor=white)
+![Cyber](https://img.shields.io/badge/Cisco-Introduction_to_Cybersecurity-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
+![ModernAI](https://img.shields.io/badge/Cisco-Introduction_to_Modern_AI-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
+![STEP](https://img.shields.io/badge/STEP_Test-English_Proficiency-34d399?style=flat-square)
 
 ---
 
-## 🛠️ Skills
+## 🛠️ Technical Skills
 
-```
-Generative AI    ████████████░░  LLMs · RAG · Multimodal · Groq · HuggingFace
-Cloud            ███████████░░░  AWS · GCP · Salesforce · ServiceNow
-Python / AI      ████████████░░  FastAPI · FAISS · CLIP · Streamlit · PyTorch
-Web Dev          ████████░░░░░░  HTML · CSS · JavaScript · EJS
-DevOps           █████████░░░░░  CI/CD · Pipelines · Automation
-UX Thinking      ███████░░░░░░░  Design Thinking · User Research
-```
-
----
-
-## 📁 Repository Structure
-
-```
-Afrin-pro.github.io/
-│
-├── index.html          # Full portfolio — single file, no frameworks
-└── README.md           # You're reading it!
-```
+| | |
+|---|---|
+| **Languages** | Java · Python · JavaScript · SQL · HTML · CSS |
+| **Salesforce** | Flow Builder · Agentforce · Apex · Lightning Web Components |
+| **Backend & Cloud** | FastAPI · Node.js · Express.js · REST APIs · Docker · Render · MongoDB Atlas |
+| **Engineering** | pytest · GitHub Actions (CI/CD) · Telemetry & Logging · Git · Agile/SDLC |
+| **CS Fundamentals** | DSA · OOP · OS · Computer Networks · DBMS · Distributed Systems |
 
 ---
 
@@ -73,25 +63,17 @@ Afrin-pro.github.io/
 
 ```
 git push → GitHub repo
-              ├── GitHub Pages  →  Afrin-pro.github.io         (auto)
-              └── Netlify       →  poetic-hummingbird-d3cf36.netlify.app  (auto)
+              ├── GitHub Pages  →  Afrin-pro.github.io
+              └── Netlify       →  poetic-hummingbird-d3cf36.netlify.app
 ```
-
-Every commit to `main` triggers an automatic redeploy on both platforms.
 
 ---
 
 ## 📬 Connect
 
-<div>
-
-[![Email](https://img.shields.io/badge/Email-afrin%40example.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrin@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shaik_Afrin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![Email](https://img.shields.io/badge/Email-afrinshaik11062005%40gmail.com-4fa8ff?style=flat-square&logo=gmail&logoColor=white)](mailto:afrinshaik11062005@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shaik_Afrin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shaik-afrin-353464302/)
 [![GitHub](https://img.shields.io/badge/GitHub-Afrin--pro-171515?style=flat-square&logo=github&logoColor=white)](https://github.com/Afrin-pro)
-
-</div>
-
----
 
 <div align="center">
 
