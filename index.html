@@ -265,6 +265,40 @@
   .gh-link:hover { color: var(--accent); }
   .gh-link svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 
+  /* ── STATS ── */
+  .stats { display: flex; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap; }
+  .stat {
+    flex: 1; min-width: 110px; text-align: center;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 0.9rem 0.5rem;
+  }
+  .stat strong {
+    display: block; font-family: 'Syne', sans-serif; font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stat span { font-size: 0.75rem; color: var(--muted); }
+
+  /* ── EXPERIENCE ── */
+  .exp-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.75rem;
+    transition: border-color 0.25s;
+  }
+  .exp-card:hover { border-color: rgba(79,168,255,0.35); }
+  .exp-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .exp-card h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; }
+  .exp-role { color: var(--accent); font-size: 0.92rem; margin-top: 0.2rem; }
+  .exp-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+  .exp-date {
+    font-size: 0.78rem; color: var(--muted); height: fit-content;
+    border: 1px solid var(--border); border-radius: 100px; padding: 0.25rem 0.8rem;
+    white-space: nowrap;
+  }
+  .exp-card ul { margin: 1.25rem 0 0 1.1rem; color: var(--muted); font-size: 0.92rem; }
+  .exp-card li { margin-bottom: 0.55rem; }
+  .exp-card li::marker { color: var(--accent); }
+
   /* ── CERTIFICATES ── */
   .certs-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,8 +324,7 @@
   .cert-info { flex: 1; min-width: 0; }
   .cert-info strong {
     display: block; font-size: 0.9rem; font-weight: 500;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    color: var(--text);
+    line-height: 1.35; color: var(--text);
   }
   .cert-info span { font-size: 0.78rem; color: var(--muted); }
   .cert-date {
@@ -345,8 +378,9 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1.2rem; }
-    .nav-links li:nth-child(n+3) { display: none; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links a { font-size: 0.7rem; letter-spacing: 0; }
+    nav { padding: 1rem; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .hero { padding: 7rem 1.5rem 3rem; }
@@ -361,6 +395,7 @@
   <div class="nav-logo">SA.</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certificates">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -371,10 +406,10 @@
 <section class="hero" style="max-width:100%; padding-inline: 0;">
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <div class="hero-badge">Open to opportunities &nbsp;✦&nbsp; Available 2026</div>
+    <div class="hero-badge">Open to opportunities &nbsp;✦&nbsp; B.Tech CSE · Class of 2027</div>
     <h1>Shaik<br><span>Afrin</span></h1>
     <p class="hero-sub">
-      Technology explorer at the intersection of AI, cloud computing, and real-world problem solving.
+      AI builder crafting multimodal search, GenAI assistants, and enterprise automation — engineered to be tested, observable, and shipped.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});return false;">View Projects →</a>
@@ -401,24 +436,60 @@
     </div>
     <div class="about-text reveal">
       <p>
-        Hi! I'm Shaik Afrin — a student builder with a deep curiosity for AI and a drive to ship things that matter. From multimodal search engines to Salesforce AI platforms, I love turning complex ideas into real, working products.
+        I am a final-year B.Tech Computer Science and Engineering student at Mohan Babu University, Tirupati, graduating in 2027. I focus on building AI-driven software that is reliable, well-tested, and ready for real users.
       </p>
       <p>
-        I've built across the full spectrum — GenAI chatbots with FastAPI and Groq, fashion search with CLIP and FAISS, enterprise automation on ServiceNow, and AI-powered admissions systems on Salesforce Agentforce.
+        My work spans generative AI, multimodal search, and enterprise automation. Highlights include a multimodal study assistant built on FastAPI and Groq with 190+ automated tests, a 44,000-product fashion search engine using FashionCLIP and FAISS, and an AI-enabled admissions system developed with Salesforce Agentforce during a 120-hour virtual internship.
       </p>
       <p>
-        Outside of tech, I care deeply about nature and community — which is why WildGuard, a wildlife conservation platform, is one of my most meaningful projects.
+        I am motivated by applying technology to practical problems, from workflow automation to wildlife conservation. I am seeking internship and entry-level software roles where I can contribute to a team, learn from experienced engineers, and keep growing.
       </p>
       <div class="tags">
-        <span class="tag">Artificial Intelligence</span>
-        <span class="tag">Cloud Computing</span>
-        <span class="tag">Generative AI</span>
-        <span class="tag green">Real-World Impact</span>
-        <span class="tag green">Open Source</span>
-        <span class="tag purple">UX Thinking</span>
-        <span class="tag purple">DevOps</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Java</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag green">Generative AI</span>
+        <span class="tag green">Multimodal Search</span>
+        <span class="tag green">Agentforce</span>
+        <span class="tag purple">Docker</span>
+        <span class="tag purple">GitHub Actions</span>
+        <span class="tag purple">pytest</span>
+        <span class="tag purple">MongoDB</span>
+        <span class="tag purple">DSA</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>190+</strong><span>automated tests</span></div>
+        <div class="stat"><strong>40+</strong><span>Trailhead badges</span></div>
+        <div class="stat"><strong>44k+</strong><span>products indexed</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <p class="section-label">Where I've worked</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="exp-card reveal">
+    <div class="exp-head">
+      <div>
+        <h3>Salesforce Virtual Internship — SmartBridge</h3>
+        <div class="exp-role">Certified Administrator · AI Agentforce Specialization</div>
+        <div class="exp-meta">AICTE / APSCHE-affiliated · Remote · 120-hour program</div>
+      </div>
+      <span class="exp-date">May 2026 – Jul 2026</span>
+    </div>
+    <ul>
+      <li>Built an AI-enabled admissions system on Salesforce Developer Edition, including custom data objects, tabs, validation rules, and record-triggered Flow automation.</li>
+      <li>Built and debugged an Agentforce AI agent with subagent routing, record-query actions, and prompt templates grounded on live CRM data.</li>
+      <li>Earned 40+ Trailhead badges, including two Superbadges and modules on Apex, Lightning Web Components, and Record-Triggered Flows.</li>
+    </ul>
   </div>
 </section>
 
@@ -436,13 +507,13 @@
     <div class="project-card card-blue reveal">
       <div class="project-icon icon-blue">🎓</div>
       <h3>AI-Enabled Student Admission System</h3>
-      <p>AI-powered Salesforce admissions platform built for the SmartBridge VIP Program (AICTE) — featuring Agentforce Admissions Assistant, automated enrollment flows, and intelligent duplicate management.</p>
+      <p>AI-enabled admissions system built on Salesforce Developer Edition during the SmartBridge virtual internship — custom objects and tabs, validation rules, record-triggered Flows, and an Agentforce agent with subagent routing, record-query actions, and prompt templates grounded on live CRM data.</p>
       <div class="project-footer">
         <div class="project-tags">
-          <span class="ptag">Salesforce</span>
-          <span class="ptag">JavaScript</span>
+          <span class="ptag">Salesforce Developer Edition</span>
           <span class="ptag">Agentforce</span>
-          <span class="ptag">AICTE</span>
+          <span class="ptag">Flow Builder</span>
+          <span class="ptag">Custom Objects</span>
         </div>
         <a href="https://github.com/Afrin-pro/AI-Enabled-Student-Admission-System" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
@@ -450,14 +521,15 @@
 
     <div class="project-card card-purple reveal">
       <div class="project-icon icon-purple">🤖</div>
-      <h3>StudyMate — GenAI Chatbot</h3>
-      <p>Chat with your notes, PDFs, and diagrams — an AI-powered study assistant built with FastAPI, Groq vision, and Hugging Face Inference API for context-aware, multimodal learning support.</p>
+      <h3>StudyMate — AI Study Assistant</h3>
+      <p>Chat with your notes, PDFs, and diagrams. A multimodal assistant with a FastAPI backend (text, image, and PDF APIs), token-based auth, and fallback across multiple LLM providers — backed by 190+ pytest tests at ~97% coverage, Prometheus-format metrics, and structured JSON logging.</p>
       <div class="project-footer">
         <div class="project-tags">
           <span class="ptag">Python</span>
           <span class="ptag">FastAPI</span>
           <span class="ptag">Groq</span>
-          <span class="ptag">HuggingFace</span>
+          <span class="ptag">Docker</span>
+          <span class="ptag">GitHub Actions</span>
         </div>
         <a href="https://github.com/Afrin-pro/StudyMate" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
       </div>
@@ -465,13 +537,14 @@
 
     <div class="project-card card-green reveal">
       <div class="project-icon icon-green">🔍</div>
-      <h3>CLIP Multimodal Search</h3>
-      <p>Multimodal fashion search engine — 44k products searchable by text, image, or both. Built with Marqo FashionCLIP, Facebook FAISS, and Streamlit. Deployed on Hugging Face Spaces.</p>
+      <h3>Fashion Similarity Search Engine</h3>
+      <p>Semantic search over 44,000+ products using FashionCLIP embeddings and a FAISS index, searchable by text, image, or both. ~0.3s query latency, and peak memory cut from ~15GB to ~200MB through streaming batch processing. Deployed on Hugging Face Spaces.</p>
       <div class="project-footer">
         <div class="project-tags">
           <span class="ptag">Python</span>
-          <span class="ptag">FAISS</span>
           <span class="ptag">FashionCLIP</span>
+          <span class="ptag">FAISS</span>
+          <span class="ptag">Docker</span>
           <span class="ptag">Streamlit</span>
         </div>
         <a href="https://github.com/Afrin-pro/fashion-similarity-search" target="_blank" class="gh-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
@@ -524,113 +597,60 @@
   <div class="certs-grid">
 
     <div class="cert-card reveal">
+      <div class="cert-badge">👁️</div>
+      <div class="cert-info">
+        <strong>Computer Vision and Object Detection with PyTorch</strong>
+        <span>LinkedIn Learning</span>
+      </div>
+    </div>
+
+    <div class="cert-card reveal">
       <div class="cert-badge">☁️</div>
       <div class="cert-info">
-        <strong>Mastering Cloud Computing & AWS</strong>
-        <span>AWS / Cloud Architecture</span>
+        <strong>Google Cloud Digital Leader</strong>
+        <span>Google Cloud</span>
       </div>
-      <span class="cert-date">Oct 2025</span>
-    </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">🔧</div>
-      <div class="cert-info">
-        <strong>DevOps Advanced</strong>
-        <span>CI/CD · Infrastructure</span>
-      </div>
-      <span class="cert-date">Nov 2025</span>
-    </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">⚙️</div>
-      <div class="cert-info">
-        <strong>DevOps Essentials</strong>
-        <span>Pipelines · Automation</span>
-      </div>
-      <span class="cert-date">Nov 2025</span>
-    </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">🌐</div>
-      <div class="cert-info">
-        <strong>Google Cloud Platform — Associate</strong>
-        <span>GCP · Cloud Associate</span>
-      </div>
-      <span class="cert-date">Oct 2025</span>
     </div>
 
     <div class="cert-card reveal">
       <div class="cert-badge">🧠</div>
       <div class="cert-info">
-        <strong>Cisco — Introduction to Modern AI</strong>
-        <span>Cisco · Artificial Intelligence</span>
+        <strong>Claude Platform 101</strong>
+        <span>Anthropic Academy</span>
       </div>
-      <span class="cert-date">Nov 2025</span>
-    </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">🔒</div>
-      <div class="cert-info">
-        <strong>Foundations of Cybersecurity</strong>
-        <span>Google · Security Fundamentals</span>
-      </div>
-      <span class="cert-date">Feb 2026</span>
-    </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">💻</div>
-      <div class="cert-info">
-        <strong>Commit to Code</strong>
-        <span>Software Development</span>
-      </div>
-      <span class="cert-date">Feb 2026</span>
     </div>
 
     <div class="cert-card reveal">
       <div class="cert-badge">🎨</div>
       <div class="cert-info">
-        <strong>UX & Design Thinking</strong>
-        <span>Human-Centred Design</span>
+        <strong>UX &amp; Design Thinking</strong>
+        <span>Udemy</span>
       </div>
-      <span class="cert-date">Nov 2025</span>
     </div>
 
     <div class="cert-card reveal">
-      <div class="cert-badge">📐</div>
+      <div class="cert-badge">🔒</div>
       <div class="cert-info">
-        <strong>Introduction to UI/UX</strong>
-        <span>Interface Design Fundamentals</span>
+        <strong>Introduction to Cybersecurity</strong>
+        <span>Cisco</span>
       </div>
-      <span class="cert-date">Nov 2025</span>
     </div>
 
     <div class="cert-card reveal">
-      <div class="cert-badge">📊</div>
+      <div class="cert-badge">🤖</div>
       <div class="cert-info">
-        <strong>Google Analytics</strong>
-        <span>Web Analytics · Data</span>
+        <strong>Introduction to Modern AI</strong>
+        <span>Cisco</span>
       </div>
-      <span class="cert-date">Nov 2025</span>
     </div>
 
     <div class="cert-card reveal">
-      <div class="cert-badge">🏷️</div>
+      <div class="cert-badge">📝</div>
       <div class="cert-info">
-        <strong>Cloud Digital Leader</strong>
-        <span>Google · Digital Transformation</span>
+        <strong>STEP Test</strong>
+        <span>English Proficiency Test</span>
       </div>
-      <span class="cert-date">Nov 2025</span>
     </div>
-
-    <div class="cert-card reveal">
-      <div class="cert-badge">🛍️</div>
-      <div class="cert-info">
-        <strong>Flipkart Runway</strong>
-        <span>E-Commerce · Product Thinking</span>
-      </div>
-      <span class="cert-date">Nov 2025</span>
-    </div>
-
   </div>
 </section>
 
@@ -650,7 +670,7 @@
     <div class="contact-links">
       <a href="mailto:afrinshaik11062005@gmail.com" class="contact-link">
         <span class="contact-icon">✉️</span>
-        <span>afrin@example.com</span>
+        <span>afrinshaik11062005@gmail.com</span>
         <span class="arrow">→</span>
       </a>
       <a href="https://www.linkedin.com/in/shaik-afrin-353464302/" target="_blank" class="contact-link">
@@ -663,6 +683,10 @@
         <span>GitHub — @Afrin-pro</span>
         <span class="arrow">→</span>
       </a>
+      <div class="contact-link" style="cursor:default;">
+        <span class="contact-icon">📍</span>
+        <span>Tirupati, Andhra Pradesh, India</span>
+      </div>
     </div>
   </div>
 </section>
